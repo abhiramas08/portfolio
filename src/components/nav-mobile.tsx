@@ -49,8 +49,8 @@ export function NavMobile({ items }: { items: NavItemType[] }) {
         }
       />
 
-      <PopoverContent side="top" align="end" sideOffset={10}>
-        <div className="flex flex-col gap-0.5">
+      <PopoverContent side="top" align="end" sideOffset={10} className="w-56 p-1.5 shadow-xl">
+        <div className="flex max-h-[60vh] flex-col gap-0.5 overflow-y-auto pr-1">
           {items.map((item) => {
             const isActive = pathname === item.href
 
