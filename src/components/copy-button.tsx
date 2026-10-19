@@ -6,7 +6,7 @@ import { Check, Copy, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button, type ButtonProps } from "@/components/ui/button"
 import { IconSwap, IconSwapItem } from "@/components/ui/icon-swap"
-import { useCopyToClipboard, type CopyState } from "@/hooks/use-copy-to-clipboard"
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 
 export interface CopyButtonProps extends Omit<ButtonProps, "children"> {
   text: string | (() => string)

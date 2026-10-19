@@ -1,13 +1,7 @@
 "use client"
 
 import * as React from "react"
-import {
-  Code2,
-  GraduationCap,
-  Layers,
-  Sparkles,
-  Terminal,
-} from "lucide-react"
+
 
 import {
   PageHeading,

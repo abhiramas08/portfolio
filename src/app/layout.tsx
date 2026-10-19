@@ -60,6 +60,44 @@ export default function RootLayout({
           type="text/javascript"
           dangerouslySetInnerHTML={{ __html: darkModeScript }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "ABHIRAM A S",
+              alternateName: "Abhiram A S",
+              jobTitle: "Computer Science Student & Frontend Developer",
+              affiliation: {
+                "@type": "CollegeOrUniversity",
+                name: "ACE College of Engineering",
+                address: {
+                  "@type": "PostalAddress",
+                  addressRegion: "Kerala",
+                  addressCountry: "IN",
+                },
+              },
+              url: SITE_INFO.url,
+              sameAs: [
+                "https://github.com/abhiramas08",
+                "https://www.linkedin.com/in/abhiram-a-s-24a52232b/",
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: SITE_INFO.name,
+              url: SITE_INFO.url,
+              description: SITE_INFO.description,
+            }),
+          }}
+        />
       </head>
       <body>
         <Providers>

@@ -9,14 +9,16 @@ import { useClickSound } from "@/hooks/soundcn/use-click-sound"
 import { Button } from "@/components/ui/button"
 import { Kbd } from "@/components/ui/kbd"
 
+const emptySubscribe = () => () => {}
+
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
   const [click] = useClickSound()
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
+  const mounted = React.useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  )
 
   const switchTheme = React.useCallback(() => {
     const next = resolvedTheme === "dark" ? "light" : "dark"

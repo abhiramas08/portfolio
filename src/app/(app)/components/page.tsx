@@ -2,10 +2,8 @@
 
 import * as React from "react"
 import {
-  Check,
   CheckCircle2,
   Code2,
-  Copy,
   ExternalLink,
   Layers,
   Sparkles,
@@ -16,13 +14,6 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tag } from "@/components/ui/tag"
 import { Input } from "@/components/ui/input"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import {
   Tabs,
   TabsContent,
@@ -43,7 +34,6 @@ import { TextFlip } from "@/features/portfolio/components/text-flip"
 
 export default function ComponentsPage() {
   const [inputValue, setInputValue] = React.useState("")
-  const [activeTab, setActiveTab] = React.useState("tab-1")
 
   return (
     <div className="space-y-10 pb-20">

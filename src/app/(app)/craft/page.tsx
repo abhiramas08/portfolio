@@ -2,14 +2,10 @@
 
 import * as React from "react"
 import {
-  ArrowRight,
   Cpu,
   ExternalLink,
   GitBranch,
-  Layers,
-  Radio,
   Sliders,
-  Sparkles,
 } from "lucide-react"
 
 import {

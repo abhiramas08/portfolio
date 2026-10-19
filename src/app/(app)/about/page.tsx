@@ -1,13 +1,10 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import {
   GraduationCap,
   MapPin,
-  Mail,
   ExternalLink,
   Code2,
   Cpu,
-  Bot,
   Rocket,
   Brain,
   Layout,

@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import {
-  ArrowRight,
   CheckCircle2,
   Code2,
   ExternalLink,
@@ -15,7 +14,6 @@ import {
 
 import { AbhiramMark } from "@/components/abhiram-mark"
 import { AbhiramMarkIsometric } from "@/components/abhiram-mark-isometric"
-import { CopyButton } from "@/components/copy-button"
 import { Heading } from "@/components/heading"
 import {
   PageHeading,
@@ -27,10 +25,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"

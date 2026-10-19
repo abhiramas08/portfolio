@@ -3,12 +3,10 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import {
-  BookOpen,
   Box,
   Briefcase,
   Code2,
   Cpu,
-  ExternalLink,
   Eye,
   FileText,
   GraduationCap,
@@ -25,7 +23,7 @@ import {
 } from "lucide-react"
 import { useTheme } from "next-themes"
 
-import { PROJECTS, TECH_STACK } from "@/config/portfolio"
+import { PROJECTS } from "@/config/portfolio"
 import { getAllBlogPosts } from "@/features/blog/data/articles"
 import { useClickSound } from "@/hooks/soundcn/use-click-sound"
 import { Button } from "@/components/ui/button"

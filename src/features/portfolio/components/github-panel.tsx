@@ -130,13 +130,17 @@ export function GitHubPanel() {
           <div className="flex items-center gap-2 text-muted-foreground">
             <FolderGit2 className="size-3.5 text-foreground/80" />
             <span>Public Repos:</span>
-            <span className="font-semibold text-foreground">{data.user.public_repos}</span>
+            <span className={`font-semibold text-foreground ${loading ? "opacity-50 animate-pulse" : ""}`}>
+              {data.user.public_repos}
+            </span>
           </div>
 
           <div className="flex items-center gap-2 text-muted-foreground">
             <Users className="size-3.5 text-foreground/80" />
             <span>Followers:</span>
-            <span className="font-semibold text-foreground">{data.user.followers}</span>
+            <span className={`font-semibold text-foreground ${loading ? "opacity-50 animate-pulse" : ""}`}>
+              {data.user.followers}
+            </span>
           </div>
 
           <div className="col-span-2 sm:col-span-1 flex items-center justify-end text-muted-foreground">

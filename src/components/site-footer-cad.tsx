@@ -1,4 +1,3 @@
-import Link from "next/link"
 
 import { SOURCE_CODE_GITHUB_URL } from "@/config/site"
 import { USER } from "@/config/portfolio"

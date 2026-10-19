@@ -8,7 +8,6 @@ import {
   Calendar,
   Clock,
   User,
-  Share2,
 } from "lucide-react"
 
 import { SITE_INFO } from "@/config/site"

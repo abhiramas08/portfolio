@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { GraduationCap, Infinity as InfinityIcon } from "lucide-react"
+import { GraduationCap } from "lucide-react"
 
 import { EDUCATION } from "@/config/portfolio"
 import { IconTile } from "@/components/ui/icon-tile"

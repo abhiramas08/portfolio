@@ -77,9 +77,23 @@ export async function GET() {
     const userData = await userRes.json()
     const reposData = await reposRes.json()
 
+    interface RawGitHubRepo {
+      id: number
+      name: string
+      full_name: string
+      html_url: string
+      description: string | null
+      stargazers_count: number
+      forks_count: number
+      language: string | null
+      default_branch: string
+      updated_at: string
+      fork: boolean
+    }
+
     // Map only verified real repository fields
     const repos = Array.isArray(reposData)
-      ? reposData.map((repo: any) => ({
+      ? (reposData as RawGitHubRepo[]).map((repo) => ({
           id: repo.id,
           name: repo.name,
           full_name: repo.full_name,
