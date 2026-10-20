@@ -72,7 +72,7 @@ export interface ProjectItem {
 }
 
 export interface SocialLink {
-  name: "github" | "linkedin" | "email"
+  name: "github" | "linkedin" | "email" | "instagram"
   title: string
   href: string
   handle: string
@@ -365,6 +365,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/abhiram-a-s-24a52232b/",
     handle: "abhiram-a-s",
+  },
+  {
+    name: "instagram",
+    title: "Instagram",
+    href: "https://www.instagram.com/abhrm.io/",
+    handle: "@abhrm.io",
   },
   {
     name: "email",

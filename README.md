@@ -2,18 +2,31 @@
 
 A visually faithful, high-performance developer portfolio for **ABHIRAM A S**, a third-year B.Tech Computer Science and Engineering student at ACE College of Engineering, Kerala.
 
-Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**, inspired by the precision CAD blueprint drafting aesthetics of [chanhdai.com](https://chanhdai.com).
+Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**, engineered with precision CAD blueprint drafting aesthetics.
+
+---
+
+## Recent Updates & Enhancements
+
+- **ASCII Earth-to-Computer Visual Panel**: Replaced the cursor demo with an autonomous looping ASCII video animation (`/media/ascii-earth-computer.mp4`) depicting orbital Earth telemetry transmitting to a desktop computer, complete with high-resolution image fallback and tactile click sound.
+- **Clean Circular Portrait Avatar**: Integrated high-resolution portrait photograph (`/images/avatar.webp`) inside the circular header frame with a subtle perimeter ring overlay (`inset-ring-1`), preserving natural grayscale shading and facial landmarks without distracting guide lines or dots.
+- **Instagram Social Integration**: Added direct Instagram profile link (`https://www.instagram.com/abhrm.io/`) alongside GitHub, LinkedIn, and Email with custom SVG glyph and unified hover styles.
+- **Attribution Cleaned**: Updated footer copyright to `© 2026 Abhiram A S. Designed & Developed with Precision.`, removing external inspiration references.
+- **Comprehensive Editing Roadmap**: Authored [`PORTFOLIO_EDITING_GUIDE.md`](./PORTFOLIO_EDITING_GUIDE.md), a 900+ line step-by-step manual covering VS Code editing, component structures, data schemas, domain configuration, and Vercel deployment.
 
 ---
 
 ## Key Features
 
+- **Autonomous ASCII Animation Panel**: Hero visual figure with orbital Earth communication video, responsive sizing, and tactile audio feedback.
+- **Clean Profile Avatar**: Circular portrait crop positioned with facial landmark headroom and natural studio background preservation.
 - **Technical Blueprint Aesthetic**: Precision CAD drafting grid lines extending to infinite viewport edges (`screen-line-*`), diagonal stripe separators, and title block metadata panels.
 - **Global Command Palette**: Instant modal search (`⌘K` or `/`) indexing pages, projects, blog articles, UI components, section blocks, craft experiments, tech skills, and theme controls.
 - **Dynamic Headline**: Animated vertical text-flip ticker cycling core engineering identities with spring damping.
 - **Real-Time Local Clock**: Dynamic analog SVG clock with trigonometric math and viewer timezone delta (`Asia/Kolkata` / IST).
 - **Theme Switcher**: Instant Dark/Light mode toggle with global hotkey (`D`), rotating CAD icon, zero flash on load, and operating system preference detection.
 - **Genuine GitHub Integration**: Real profile data and repositories fetched from the GitHub API (`/api/github`) with rate-limit handling and verified offline caching.
+- **Social Media Bar**: Quick links to GitHub, LinkedIn, Instagram, and Email with consistent CAD-styled outline buttons.
 - **Modular Component & Block Showcases**: Dedicated `/components` and `/blocks` routes displaying interactive UI primitives with code previews and clipboard copy actions.
 - **Technical Craft Showcase**: Hardware and embedded vision lab experiments at `/craft`, featuring the *Medicine Expiry Detection System* and *Drone & Robotics Workshop*.
 - **Blog Engine**: Extensible Markdown/MDX content layer at `/blog` with support for syntax-highlighted code panels, SEO metadata, reading times, tag filters, and clean empty states.
@@ -31,6 +44,35 @@ Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**, i
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Theme Engine**: `next-themes` with zero-flash pre-hydration script
 - **Sound Engine**: Native Web Audio API with zero-network base64 audio synthesis
+
+---
+
+## Project Structure
+
+```text
+├── public/
+│   ├── images/
+│   │   ├── avatar.webp            # Active profile photo (786x786 WebP)
+│   │   ├── avatar-circular-clean.png # Circular masked portrait
+│   │   └── portrait-clean-dark-bg.png# Framed portrait on dark canvas
+│   └── media/
+│       ├── ascii-earth-computer.mp4 # Looping ASCII animation video
+│       └── ascii-earth-computer.jpg # Video fallback poster
+├── src/
+│   ├── app/                       # Next.js App Router routes & layouts
+│   ├── components/                # Global UI components
+│   │   ├── abhiram-mark-isometric.tsx # ASCII Earth animation panel
+│   │   ├── user-avatar.tsx        # Profile photo circular container
+│   │   ├── site-header.tsx        # Sticky top navigation
+│   │   ├── site-footer-cad.tsx    # Blueprint footer
+│   │   └── command-palette.tsx    # Global search (Cmd+K)
+│   ├── config/
+│   │   ├── portfolio.ts           # Central personal details & social links
+│   │   └── site.ts                # Metadata & nav configuration
+│   └── features/
+│       └── portfolio/             # Profile header, projects, timeline
+└── PORTFOLIO_EDITING_GUIDE.md     # Complete manual maintenance guide
+```
 
 ---
 
@@ -52,17 +94,20 @@ Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**, i
 
 ---
 
-## Files Used to Update Personal Content
+## Manual Content Customization
 
-To customize or add your genuine projects, articles, and details:
+For full details, refer to [`PORTFOLIO_EDITING_GUIDE.md`](./PORTFOLIO_EDITING_GUIDE.md). Primary locations:
 
 1. **Profile, Education, Stack & Projects**:
    - File: `src/config/portfolio.ts`
-   - Update `USER` (headline, bio, interests), `EDUCATION` (coursework, degree), `EXPERIENCES` (self-learning tracks), `TECH_STACK` (skills), and `PROJECTS` (candidate web and embedded applications).
-2. **Site Metadata & Social Links**:
-   - File: `src/config/site.ts`
-   - Update website URL, page title templates, and navigation links.
-3. **Blog Articles**:
+   - Update `USER` (headline, bio, interests), `SOCIAL_LINKS` (GitHub, LinkedIn, Instagram, Email), `EDUCATION`, `EXPERIENCES`, `TECH_STACK`, and `PROJECTS`.
+2. **Profile Photo**:
+   - File: `public/images/avatar.webp`
+   - Replace with any $1:1$ aspect ratio photo. It renders automatically inside `src/components/user-avatar.tsx`.
+3. **Hero Visual Panel**:
+   - File: `src/components/abhiram-mark-isometric.tsx`
+   - Video asset: `public/media/ascii-earth-computer.mp4`.
+4. **Blog Articles**:
    - File: `src/features/blog/data/articles.ts`
    - Add new article objects with standard Markdown `content`. Set `published: true` to publish.
 
@@ -137,16 +182,6 @@ Configure the following environment variables in Vercel project settings:
 
 ---
 
-## Remaining Notes & Next Steps
+## License
 
-1. **Avatar Image**: The avatar defaults to `/images/avatar.webp`. You can place your preferred portrait in `public/images/avatar.webp`.
-2. **Blog Posts**: The blog is set to an elegant empty state as requested (`ARTICLES = []`). A starter template post is preserved in `src/features/blog/data/articles.ts` ready to be published whenever you write new articles.
-3. **Analytics**: You can optionally integrate privacy-friendly analytics such as Vercel Analytics or Cloudflare Web Analytics when deploying.
-
----
-
-## License & Attribution
-
-- Design inspiration from [chanhdai.com](https://chanhdai.com) under the MIT License.
-- In accordance with the reference repository's [TRADEMARK.md](https://github.com/ncdai/chanhdai.com/blob/main/TRADEMARK.md), all personal branding, monograms, logos, and likenesses have been completely replaced with original assets and genuine academic data for **Abhiram A S**.
 - Audio click synthesis assets by Kenney (CC0).

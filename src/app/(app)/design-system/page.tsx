@@ -63,8 +63,7 @@ export default function DesignSystemPage() {
           <PageHeadingTitle>Design System & Primitives</PageHeadingTitle>
           <PageHeadingDescription>
             Faithfully engineered blueprint tokens, neutral OKLCH palette,
-            modular UI primitives, and accessible micro-interactions inspired by
-            chanhdai.com.
+            modular UI primitives, and accessible micro-interactions.
           </PageHeadingDescription>
         </PageHeading>
 
