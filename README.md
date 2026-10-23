@@ -2,7 +2,7 @@
 
 A visually faithful, high-performance developer portfolio for **ABHIRAM A S**, a third-year B.Tech Computer Science and Engineering student at ACE College of Engineering, Kerala.
 
-Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**, inspired by the precision CAD blueprint drafting aesthetics of [chanhdai.com](https://chanhdai.com).
+Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**, engineered with precision CAD blueprint drafting aesthetics.
 
 ---
 
@@ -145,8 +145,6 @@ Configure the following environment variables in Vercel project settings:
 
 ---
 
-## License & Attribution
+## License
 
-- Design inspiration from [chanhdai.com](https://chanhdai.com) under the MIT License.
-- In accordance with the reference repository's [TRADEMARK.md](https://github.com/ncdai/chanhdai.com/blob/main/TRADEMARK.md), all personal branding, monograms, logos, and likenesses have been completely replaced with original assets and genuine academic data for **Abhiram A S**.
 - Audio click synthesis assets by Kenney (CC0).

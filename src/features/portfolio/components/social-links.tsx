@@ -4,7 +4,7 @@ import * as React from "react"
 import { Mail } from "lucide-react"
 
 import { SOCIAL_LINKS } from "@/config/portfolio"
-import { GitHubIcon, LinkedInIcon } from "@/components/icons"
+import { GitHubIcon, LinkedInIcon, InstagramIcon } from "@/components/icons"
 import { Button } from "@/components/ui/button"
 import {
   Tooltip,
@@ -45,6 +45,7 @@ export function SocialLinks() {
                           >
                             {item.name === "github" && <GitHubIcon />}
                             {item.name === "linkedin" && <LinkedInIcon />}
+                            {item.name === "instagram" && <InstagramIcon />}
                             {item.name === "email" && <Mail />}
                           </a>
                         }

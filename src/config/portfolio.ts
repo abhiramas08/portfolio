@@ -72,7 +72,7 @@ export interface ProjectItem {
 }
 
 export interface SocialLink {
-  name: "github" | "linkedin" | "email"
+  name: "github" | "linkedin" | "email" | "instagram"
   title: string
   href: string
   handle: string
@@ -220,38 +220,17 @@ export const EXPERIENCES: ExperienceItem[] = [
     skills: [
       "Data Structures",
       "Algorithms",
-      "C / C++",
-      "Java",
-      "SQL",
-      "Linux",
     ],
   },
 ]
 
 export const TECH_STACK: TechStackItem[] = [
   // Languages
-  { key: "c", title: "C", category: "Languages" },
-  { key: "cpp", title: "C++", category: "Languages" },
   { key: "python", title: "Python", category: "Languages" },
-  { key: "java", title: "Java", category: "Languages" },
-  { key: "javascript", title: "JavaScript", category: "Languages" },
-  { key: "typescript", title: "TypeScript", category: "Languages" },
-  { key: "sql", title: "SQL", category: "Languages" },
-
   // Frontend & Web
-  { key: "react", title: "React", category: "Frontend & Web" },
-  { key: "nextjs", title: "Next.js", category: "Frontend & Web" },
-  { key: "tailwind", title: "Tailwind CSS", category: "Frontend & Web" },
   { key: "html5", title: "HTML5", category: "Frontend & Web" },
   { key: "css3", title: "CSS3", category: "Frontend & Web" },
-
   // Backend & Databases
-  { key: "nodejs", title: "Node.js", category: "Backend & Databases" },
-  { key: "express", title: "Express.js", category: "Backend & Databases" },
-  { key: "postgresql", title: "PostgreSQL", category: "Backend & Databases" },
-  { key: "mongodb", title: "MongoDB", category: "Backend & Databases" },
-  { key: "rest-api", title: "REST APIs", category: "Backend & Databases" },
-
   // Embedded, AI & Systems
   { key: "esp32", title: "ESP32-CAM", category: "Embedded, AI & Systems" },
   { key: "arduino", title: "Arduino", category: "Embedded, AI & Systems" },
@@ -262,8 +241,6 @@ export const TECH_STACK: TechStackItem[] = [
   { key: "git", title: "Git", category: "Tools & Workflow" },
   { key: "github", title: "GitHub", category: "Tools & Workflow" },
   { key: "vscode", title: "VS Code", category: "Tools & Workflow" },
-  { key: "linux", title: "Linux / Shell", category: "Tools & Workflow" },
-  { key: "postman", title: "Postman", category: "Tools & Workflow" },
 ]
 
 export const PROJECTS: ProjectItem[] = [
@@ -365,6 +342,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/abhiram-a-s-24a52232b/",
     handle: "abhiram-a-s",
+  },
+  {
+    name: "instagram",
+    title: "Instagram",
+    href: "https://www.instagram.com/abhrm.io/",
+    handle: "@abhrm.io",
   },
   {
     name: "email",

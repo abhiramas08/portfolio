@@ -76,7 +76,7 @@ export function SiteFooterCad() {
 
         {/* Copyright & Disclaimer note */}
         <div className="p-4 text-center font-mono text-[11px] text-muted-foreground">
-          © {new Date().getFullYear()} {USER.name}. Built with Next.js App Router & Tailwind CSS v4. Inspired by the engineering aesthetics of chanhdai.com.
+          © {new Date().getFullYear()} {USER.name}. Designed & Developed with Precision.
         </div>
       </div>
     </footer>
