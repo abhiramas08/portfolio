@@ -193,21 +193,12 @@ This section follows the **exact visual order** of your website as seen in your 
   ],
   ```
   You can add new strings, edit wording, or change the order. The animation adjusts automatically.
-- **Switch from CAD Avatar to a real photo:**  
-  Open `src/components/user-avatar.tsx`. Replace its inner SVG with Next.js Image:
-  ```tsx
-  import Image from "next/image"
-  import { USER } from "@/config/portfolio"
-
-  export function UserAvatar({ className }: { className?: string }) {
-    return (
-      <div className={cn("relative flex size-full overflow-hidden rounded-full", className)}>
-        <Image src={USER.avatar} alt={USER.name} fill className="object-cover" priority />
-      </div>
-    )
-  }
-  ```
-  Then place your photo at `public/images/avatar.webp`.
+- **Updating or Replacing Your Profile Photo:**  
+  Your profile photo is displayed cleanly in `src/components/user-avatar.tsx` inside a circular frame with a subtle ring border.
+  To change the photo:
+  1. Crop your new photo into a square (1:1 aspect ratio) with your face vertically centered.
+  2. Save it as `public/images/avatar.webp` (or `avatar.jpg`).
+  3. The avatar component automatically renders the clean image within the circular frame.
 
 ---
 
